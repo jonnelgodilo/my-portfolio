@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jonnel Godilo — Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:"Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(900px 400px at 10% 10%, rgba(0,150,120,0.06), transparent 8%),
+                  linear-gradient(180deg,#e6fff7,#dff7ef 45%, #f6fff9 100%);
+      color:#213130;padding-bottom:60px;
+    }
+    .top-nav{background:rgba(255,255,255,0.96);box-shadow:0 6px 18px rgba(12,40,30,0.06);position:sticky;top:0;z-index:99}
+    .nav-wrap{max-width:1000px;margin:0 auto;padding:10px 20px;display:flex;justify-content:center}
+    .nav{list-style:none;display:flex;gap:8px}
+    .nav a{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;color:#18544a;font-weight:600}
+    .nav a.active{color:#00695c;border-bottom:3px solid #00695c}
+
+    .wrap{max-width:1000px;margin:34px auto;padding:18px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 12px 30px rgba(15,50,45,0.06);transition:transform .16s,box-shadow .16s}
+    .card:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(15,50,45,0.10)}
+    .card h3{color:#00695c;margin-bottom:8px}
+    .tags{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:#e6fff7;color:#00695c;padding:6px 10px;border-radius:999px;font-weight:600;font-size:.88rem}
+  </style>
+</head>
+<body>
+  <header class="top-nav">
+    <div class="nav-wrap">
+      <ul class="nav" role="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="wrap" aria-labelledby="projects-title">
+    <h2 id="projects-title" style="color:#00695c;margin-bottom:18px">Selected Projects</h2>
+
+    <div class="grid">
+      <article class="card" aria-labelledby="p1">
+        <h3 id="p1">Portfolio Website</h3>
+        <p>A responsive personal portfolio website showcasing my skills, projects, and experience. Built with modern web technologies and optimized for all devices.</p>
+        <div class="tags">
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+        </div>
+      </article>
+
+      <article class="card" aria-labelledby="p2">
+        <h3 id="p2">Web Application</h3>
+        <p>A dynamic web application demonstrating full-stack development skills with user authentication, database integration, and responsive design.</p>
+        <div class="tags"><span class="tag">Figma</span><span class="tag">UI/UX</span></div>
+      </article>
+
+      <article class="card" aria-labelledby="p3">
+        <h3 id="p3">Mobile App Concept</h3>
+        <p>A mobile application concept focusing on user experience and modern design principles. Includes wireframes and interactive prototypes.</p>
+        <div class="tags"><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
