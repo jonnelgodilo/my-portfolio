@@ -3,98 +3,132 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Jenny Gipa</title>
+  <title>Contact — Jonnel Godilo</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:"Segoe UI", Roboto, Arial, sans-serif;
-      background: linear-gradient(180deg,#fffde7,#fffde7 40%,#fffff0 100%);
-      color:#5b4500;
-      padding-bottom:60px;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(900px 400px at 10% 10%, rgba(0,102,204,0.06), transparent 8%),
+                  linear-gradient(180deg, #87cefa, #4682b4 45%, #1e3c72 100%);
+      color: #213130;
+      padding-bottom: 60px;
     }
 
-    /* Top Navigation */
-    .top-nav{
-      background:rgba(239, 238, 227, 0.95);
-      box-shadow:0 6px 18px rgba(251,192,45,0.15);
-      position:sticky;top:0;z-index:99
+    /* Top nav */
+    .top-nav {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 99;
     }
-    .nav-wrap{max-width:1000px;margin:0 auto;padding:10px 20px;display:flex;justify-content:center}
-    .nav{list-style:none;display:flex;gap:8px}
-    .nav a{
-      display:inline-block;
-      padding:10px 16px;
-      border-radius:10px;
-      text-decoration:none;
-      color:#8d6e00;
-      font-weight:600
+    .nav-wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
     }
-    .nav a.active{
-      color:#f9a825;
-      border-bottom:3px solid #f9a825
+    .nav { list-style: none; display: flex; gap: 8px; }
+    .nav a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+      transition: all .2s ease;
+      border-bottom: 3px solid transparent;
     }
-
-    /* Main Wrapper */
-    .wrap{
-      max-width:1000px;
-      margin:34px auto;
-      padding:18px;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px
+    .nav a.active {
+      color: #ffffff;
+      border-bottom-color: #ffffff;
     }
-
-    /* Card */
-    .card{
-      background:#fff;
-      border-radius:12px;
-      padding:20px;
-      box-shadow:0 18px 40px rgba(251,192,45,0.18)
-    }
-    h2{color:#d58a12;margin-bottom:12px}
-
-    /* Contact Info */
-    .contact-list{display:flex;flex-direction:column;gap:12px}
-    .contact-row{display:flex;gap:12px;align-items:center;color:#5b4500}
-    .contact-row i{font-size:1.05rem;width:22px;text-align:center;color:#f9a825}
-    .contact-row a{color:#5b4500;text-decoration:none;font-weight:600}
-    .contact-row a:hover{color:#fbc02d;text-decoration:underline}
-
-    /* Form */
-    form{display:flex;flex-direction:column;gap:12px}
-    label{font-weight:700;color:#5b4500}
-    input,textarea{
-      background:#fff;
-      padding:12px;
-      border:1px solid #fbc02d;
-      border-radius:8px;
-      font-size:1rem;
-      color:#5b4500
-    }
-    input:focus, textarea:focus{
-      outline:none;
-      border-color:#f9a825;
-      box-shadow:0 0 6px rgba(249,168,37,0.4)
-    }
-    button{
-      background:#fbc02d;
-      color:#5b4500;
-      padding:12px 16px;
-      border:none;
-      border-radius:10px;
-      font-weight:700;
-      cursor:pointer;
-      transition:transform .12s ease,box-shadow .12s ease;
-    }
-    button:hover{
-      transform:translateY(-3px);
-      box-shadow:0 10px 30px rgba(251,192,45,0.3)
+    .nav a:hover {
+      background: #3399ff;
+      color: #ffffff;
     }
 
-    /* Responsive */
-    @media (max-width:880px){
-      .wrap{grid-template-columns:1fr; padding:18px}
+    /* Page content */
+    .wrap {
+      max-width: 1000px;
+      margin: 34px auto;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 18px 40px rgba(15,50,45,0.06);
+    }
+
+    /* Headings */
+    h2 { margin-bottom: 12px; }
+    #contact-heading { color: #000000; } /* changed to black */
+    #message-heading { color: #ffffff; }
+
+    .contact-list { display: flex; flex-direction: column; gap: 12px; }
+    .contact-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      color: #2f4b48;
+    }
+    .contact-row i {
+      color: #3399ff; /* blue icons */
+      font-size: 1.05rem;
+      width: 22px;
+      text-align: center;
+      transition: color .2s ease;
+    }
+    .contact-row i:hover {
+      color: #0066cc; /* darker blue on hover */
+    }
+
+    /* LinkedIn link color */
+    .linkedin-link {
+      color: #0a3d91; /* dark blue text */
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .linkedin-link:hover {
+      color: #0050b3;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #d8eae4;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #213130;
+    }
+    button {
+      background: #3399ff;
+      color: #fff;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,102,204,0.14);
+    }
+
+    @media (max-width: 880px) {
+      .wrap { grid-template-columns: 1fr; padding: 18px; }
     }
   </style>
 </head>
@@ -117,11 +151,11 @@
       <div class="contact-list">
         <div class="contact-row">
           <i class="fa-solid fa-envelope"></i>
-          <div><strong>Email</strong><div>jennygipa750@gmail.com</div></div>
+          <div><strong>Email</strong><div>jonnel.godilo@sorsu.edu.ph</div></div>
         </div>
         <div class="contact-row">
           <i class="fa-solid fa-phone"></i>
-          <div><strong>Phone</strong><div>+63 965 516 5077</div></div>
+          <div><strong>Phone</strong><div>+63 947 825 4291</div></div>
         </div>
         <div class="contact-row">
           <i class="fa-solid fa-location-dot"></i>
@@ -132,10 +166,8 @@
           <div>
             <strong>LinkedIn</strong>
             <div>
-              <a href="https://www.linkedin.com/in/jenny-gipa-67020a364" 
-                 class="linkedin-link" 
-                 target="_blank">
-                linkedin.com/in/jenny-gipa
+              <a href="https://www.linkedin.com/in/jonnel-godilo-560b67304" class="linkedin-link">
+                linkedin.com/in/jonnel-godilo
               </a>
             </div>
           </div>
@@ -146,17 +178,17 @@
     <!-- Right: Message Form -->
     <section class="card" aria-labelledby="message-heading">
       <h2 id="message-heading">Send Me a Message</h2>
-      <form id="contactForm" method="post" onsubmit="alert('Form submitted (demo). Replace form action with your backend or use EmailJS/Formspree).'); return false;">
-        <label>Name</label>
+      <form id="contactForm" method="post" onsubmit="alert('Form submitted (demo). Replace form action with your backend).'); return false;">
+        <label style="font-weight:700;color:#114657">Name</label>
         <input type="text" name="name" placeholder="Your full name" required>
 
-        <label>Email</label>
+        <label style="font-weight:700;color:#2f444b">Email</label>
         <input type="email" name="email" placeholder="you@example.com" required>
 
-        <label>Subject</label>
+        <label style="font-weight:700;color:#2f444b">Subject</label>
         <input type="text" name="subject" placeholder="Subject" required>
 
-        <label>Message</label>
+        <label style="font-weight:700;color:#2f444b">Message</label>
         <textarea name="message" placeholder="Tell me about your project or inquiry..." rows="6" required></textarea>
 
         <button type="submit"><i class="fa-solid fa-paper-plane" style="margin-right:8px"></i>Send Message</button>
